@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "experiment": "bafuse_final_data_validation_v2",
+  "training_authorized": false,
+  "split_version": "parts12-12-4-plus-part3-12-external-v2",
+  "cell_split_manifest": "reports/bafuse_final_data_validation_v2/cell_split_12train_4val_12external.csv",
+  "observation_split_manifest": "reports/bafuse_final_data_validation_v2/observation_split_12train_4val_12external.csv",
+  "partition_sizes": {
+    "train": 12,
+    "validation": 4,
+    "external_test": 12,
+    "internal_test": 0
+  },
+  "external_test_policy": "All 12 Part 3 cells are external test by the user's later decision; this supersedes the earlier 11-Part-3-plus-1-Part-1/2 proposal.",
+  "targets": {
+    "soh": {
+      "definition": "100 * same-cell Step 4 discharge capacity at the measured RPT / selected same-cell BoL capacity",
+      "official_ground_truth": false,
+      "capacity_unit": "native Amphr; absolute unit semantics remain unverified"
+    },
+    "degradation": {
+      "labels": ["LLI", "LAM_anode", "LAM_cathode"],
+      "source": "PyDMA model-derived diagnostics, not independently measured ground truth",
+      "primary_gate": "RMSE < 15 mV and at least 3 accepted runs",
+      "sensitivity_gate": "RMSE < 10 mV"
+    }
+  },
+  "feature_modalities": {
+    "discharge": "Step 4 voltage curve; same-RPT target-derived capacity features are prohibited",
+    "charge": "Protocol-aware charge curve: Step 6 for Parts 1-2, Steps 5+6 for Part 3",
+    "physics": "Validated Temp1 features only; preserve missing values and availability masks"
+  },
+  "preprocessing": {
+    "fit_scope": "training cells only",
+    "external_test_use": "final evaluation only; never for fitting, tuning, selection, or early stopping"
+  },
+  "checkpoint_compatibility": {
+    "historical_checkpoint": "models/checkpoints/part1_cnn1d/cnn1d_checkpoint.pt",
+    "historical_split": "10/3/3 plus 11 Part 3 external",
+    "reuse_historical_metrics_as_new_split_metrics": false
+  }
+}

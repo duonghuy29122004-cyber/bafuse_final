@@ -1,0 +1,20 @@
+{
+  "batch_size": 16,
+  "checkpoint_selection": "lowest Validation RMSE in SoH percentage points",
+  "early_stopping_min_delta": 0.0,
+  "early_stopping_patience": 35,
+  "fresh_initialization": true,
+  "learning_rate": 0.001,
+  "loss": "MSELoss on Train-normalized SoH",
+  "max_epochs": 300,
+  "mixed_precision_enabled": true,
+  "mixed_precision_requested": true,
+  "optimizer": "AdamW",
+  "scaler_fit_scope": "Train observations only",
+  "seeds": [
+    42,
+    123,
+    2026
+  ],
+  "weight_decay": 0.0001
+}

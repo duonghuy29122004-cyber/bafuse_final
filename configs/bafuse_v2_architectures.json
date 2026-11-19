@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "input_contract": {
+    "discharge_voltage_shape": ["B", 128],
+    "charge_voltage_shape": ["B", 128],
+    "physics_feature_names": [
+      "mean_discharge_temperature_native",
+      "discharge_temperature_rise_native",
+      "discharge_plateau_slope_v_per_progress",
+      "discharge_slope_variability_v_per_progress",
+      "mean_absolute_discharge_current_native"
+    ],
+    "output_shape": ["B", 1],
+    "output_space": "same-RPT SoH percentage points",
+    "prohibited_predictors": [
+      "capacity",
+      "cell_id",
+      "group_id",
+      "external_labels",
+      "target_derived_features"
+    ]
+  },
+  "models": [
+    {
+      "name": "CNN1D-3M",
+      "family": "CNN1D",
+      "modality": "3M",
+      "role": "official_historical_baseline"
+    },
+    {
+      "name": "CNN1D-2M",
+      "family": "CNN1D",
+      "modality": "2M",
+      "role": "historical_comparison"
+    },
+    {
+      "name": "TCN-2M",
+      "family": "TCN",
+      "modality": "2M",
+      "role": "historical_comparison"
+    },
+    {
+      "name": "TCN-3M",
+      "family": "TCN",
+      "modality": "3M",
+      "role": "historical_comparison"
+    },
+    {
+      "name": "ResNet1D-2M",
+      "family": "ResNet1D",
+      "modality": "2M",
+      "role": "new_architecture"
+    },
+    {
+      "name": "ResNet1D-3M",
+      "family": "ResNet1D",
+      "modality": "3M",
+      "role": "new_architecture"
+    },
+    {
+      "name": "InceptionTime-2M",
+      "family": "InceptionTime",
+      "modality": "2M",
+      "role": "new_architecture"
+    },
+    {
+      "name": "InceptionTime-3M",
+      "family": "InceptionTime",
+      "modality": "3M",
+      "role": "new_architecture"
+    },
+    {
+      "name": "TCN-Attention-2M",
+      "family": "TCN-Attention",
+      "modality": "2M",
+      "role": "new_architecture"
+    },
+    {
+      "name": "TCN-Attention-3M",
+      "family": "TCN-Attention",
+      "modality": "3M",
+      "role": "new_architecture"
+    }
+  ]
+}

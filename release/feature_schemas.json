@@ -1,0 +1,25 @@
+{
+  "discharge": {
+    "step": 4,
+    "width": 128
+  },
+  "charge": {
+    "step": 10,
+    "width": 128
+  },
+  "CNN-3M_Physics": [
+    "mean_abs_discharge_current",
+    "discharge_current_variability",
+    "discharge_voltage_slope_20_80",
+    "discharge_voltage_derivative_mad_10_90",
+    "discharge_voltage_segment_contrast_10_30_vs_70_90"
+  ],
+  "normalization": "Train-only population z score; inverse target scaling returns SoH percent",
+  "updated_candidate_schema": [
+    "nominal_cycle_age",
+    "voltage_droop_50_soc",
+    "discharge_voltage_slope_20_80",
+    "discharge_voltage_derivative_mad_10_90",
+    "discharge_voltage_segment_contrast_10_30_vs_70_90"
+  ]
+}

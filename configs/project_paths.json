@@ -1,0 +1,31 @@
+{
+  "dataset_parts": {
+    "1": "data/raw/oxford/part1",
+    "2": "data/raw/oxford/part2",
+    "3": "data/raw/oxford/part3"
+  },
+  "processed_root": "data/processed",
+  "interim_root": "data/interim",
+  "manifests_root": "data/manifests",
+  "unified_observation_manifest": "data/manifests/unified_observation_manifest.csv",
+  "rpt_observation_manifest": "data/manifests/bafuse_rpt_observations.csv",
+  "source_availability_manifest": "data/manifests/source_file_availability.csv",
+  "part2_bol_policy_decisions": "reports/bafuse_part2_bol_resolution_v1/part2_bol_policy_decisions.csv",
+  "feature_run": "data/processed/features/part1_expanded_same_time_baselines",
+  "baseline_run": "experiments/results/benchmarks/part1_cnn1d_baseline",
+  "checkpoint": "models/checkpoints/part1_cnn1d/cnn1d_checkpoint.pt",
+  "soh_labels": {
+    "1": "data/processed/label_soh_part1_2/run_007_part1_capacity_qc/labels_soh.csv",
+    "2": "data/processed/label_soh_part1_2/run_010_part2_soh_candidates/labels_soh_part2.csv",
+    "3": "experiments/results/data_audits/part3_soh_candidates/labels_soh_candidates.csv"
+  },
+  "pydma_part12": "data/processed/label_pydma_fit_part1_2/pydma_results_rmse15.csv",
+  "pydma_part3": "data/processed/label_pydma_fit_part3/run_009_part3_pydma/pydma_results.csv",
+  "pydma_g5_audit": "experiments/results/data_audits/part2_g5_candidate_pydma_audit_20261105_193440/candidate_pydma_fits.csv",
+  "split_manifest": "data/manifests/splits/parts12-10-3-3-plus-part3-external-v1.csv",
+  "pydma_visualization": "experiments/results/diagnostics/pydma_two_stage_128_fit_visualization",
+  "visualization_part12_labels": "experiments/results/data_audits/part2_g5_candidate_pydma_audit_20261105_193440/pydma_results_rmse15_training_experiment.csv",
+  "visualization_part3_labels": "data/processed/label_pydma_fit_part3/run_009_part3_pydma/pydma_results.csv",
+  "visualization_stage2_predictions": "experiments/results/benchmarks/parts12_12-4_two_stage_cnn_128_charge_discharge_external_test/stage2_predictions.csv",
+  "hybrid_output": "experiments/results/hybrid_cnn1d_pydma"
+}

@@ -1,0 +1,167 @@
+{
+  "dataset_identifier": "bafuse-final2-p5-g10-guide-verified-v2",
+  "split_counts": {
+    "external_test": 74,
+    "train": 99,
+    "validation": 40
+  },
+  "split_cell_counts": {
+    "external_test": 12,
+    "train": 9,
+    "validation": 3
+  },
+  "evaluation": "Archived overall observation-level metrics. MAE/RMSE in SoH percentage points; Part 3 references are provisional.",
+  "approved_models": {
+    "CNN-3M": {
+      "seed": 2026,
+      "best_epoch": 13,
+      "best_sha256": "61c2129c23298a724a6317e83b8a2f849a0d4a1029c40fc81794d188b2cf8314",
+      "bytes": 204119,
+      "bundle_path": "checkpoints/CNN-3M/best.pt",
+      "metrics": {
+        "train": {
+          "MAE": 0.7822851315893308,
+          "RMSE": 0.9779548514356323,
+          "R2": 0.9693201199002658
+        },
+        "validation": {
+          "MAE": 0.36091041564941406,
+          "RMSE": 0.44066856642009583,
+          "R2": 0.9938411385268517
+        },
+        "external": {
+          "MAE": 1.4480635153280723,
+          "RMSE": 1.7655163017658417,
+          "R2": 0.8206283376913217
+        }
+      }
+    },
+    "TCN-2M": {
+      "seed": 123,
+      "best_epoch": 113,
+      "best_sha256": "901a2db5305f8209796de2fedbc31e561a45b989087bf24742ec05ec56d6ce5f",
+      "bytes": 259197,
+      "bundle_path": "checkpoints/TCN-2M/best.pt",
+      "metrics": {
+        "train": {
+          "MAE": 0.6448842828924005,
+          "RMSE": 0.8092015804822096,
+          "R2": 0.9789946708268338
+        },
+        "validation": {
+          "MAE": 0.287774658203125,
+          "RMSE": 0.3823754612733551,
+          "R2": 0.9953627947561128
+        },
+        "external": {
+          "MAE": 1.0995268950591217,
+          "RMSE": 1.4139373650459963,
+          "R2": 0.8849542149848071
+        }
+      }
+    },
+    "ResNet-2M": {
+      "seed": 2026,
+      "best_epoch": 20,
+      "best_sha256": "c4293377bd47e032f9817ff2005e3ffb1504649497f3d4af580ba7d747b3d07f",
+      "bytes": 480059,
+      "bundle_path": "checkpoints/ResNet-2M/best.pt",
+      "metrics": {
+        "train": {
+          "MAE": 0.7943058206577494,
+          "RMSE": 1.017286180977245,
+          "R2": 0.9668027325706636
+        },
+        "validation": {
+          "MAE": 0.4037317276000977,
+          "RMSE": 0.5043933288431446,
+          "R2": 0.9919310883847832
+        },
+        "external": {
+          "MAE": 1.28980760316591,
+          "RMSE": 1.596451938660405,
+          "R2": 0.8533364927772109
+        }
+      }
+    },
+    "DenseNet-2M": {
+      "seed": 42,
+      "best_epoch": 40,
+      "best_sha256": "ee36ef8765b97aa56dffc9a41d644d44dafa3cdc4a15416147e1e7ce25471a44",
+      "bytes": 536371,
+      "bundle_path": "checkpoints/DenseNet-2M/best.pt",
+      "metrics": {
+        "train": {
+          "MAE": 0.9191914568043719,
+          "RMSE": 1.1734097669623864,
+          "R2": 0.9558312158329831
+        },
+        "validation": {
+          "MAE": 0.27991542816162107,
+          "RMSE": 0.39223656371909554,
+          "R2": 0.9951205323669836
+        },
+        "external": {
+          "MAE": 1.0836046579721812,
+          "RMSE": 1.383902053736737,
+          "R2": 0.8897899811401437
+        }
+      }
+    },
+    "ConvNeXt-2M": {
+      "seed": 123,
+      "best_epoch": 70,
+      "best_sha256": "9f1082599ea48b4d61830375b7bb9cd8c384fe1c41115443fa6c78371e4a797e",
+      "bytes": 546549,
+      "bundle_path": "checkpoints/ConvNeXt-2M/best.pt",
+      "metrics": {
+        "train": {
+          "MAE": 0.8705334133572049,
+          "RMSE": 1.0773044466343844,
+          "R2": 0.9627700072279066
+        },
+        "validation": {
+          "MAE": 0.31691455841064453,
+          "RMSE": 0.41028607320745536,
+          "R2": 0.9946611239095268
+        },
+        "external": {
+          "MAE": 1.2572698850889463,
+          "RMSE": 1.5404603285569063,
+          "R2": 0.8634438053801065
+        }
+      }
+    }
+  },
+  "updated_physics_candidate": {
+    "promoted": false,
+    "seed": 123,
+    "epoch": 9,
+    "checkpoint_sha256": "085dcbe507be32a5b47a2cf0ac3183f7bd351cbd93a5583aab288f03a9b351e0",
+    "train": {
+      "MAE": 0.810721734557489,
+      "N": 99,
+      "N_cells": 9,
+      "R2": 0.9684665825917329,
+      "RMSE": 0.9914652479774226
+    },
+    "validation": {
+      "MAE": 0.369512939453125,
+      "N": 40,
+      "N_cells": 3,
+      "R2": 0.9933074788656445,
+      "RMSE": 0.45936376046273497
+    },
+    "external": {
+      "MAE": 1.0459465851654877,
+      "N": 74,
+      "N_cells": 12,
+      "R2": 0.9070808434805462,
+      "RMSE": 1.2707129177615952
+    },
+    "checkpoint_in_proposed_bundle": false
+  },
+  "approved_training_config_sha256": "511d36e0c3d99753863c3259732807c6419829a9d7b337ebeb6e34d3c5760217",
+  "approved_scaler_sha256": "9c3cf1c4af0af5a439640fcfe5d89421dbefc9066c4c11e10a1bae3489f870d4",
+  "raw_oxford_records_in_release": false
+}
